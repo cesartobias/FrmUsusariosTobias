@@ -1,5 +1,3 @@
-import { KeyPairSyncResult } from "crypto";
-
 export class Usuarios {
 
     constructor(

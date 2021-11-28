@@ -1,0 +1,57 @@
+<form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName" required>
+  
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName">
+
+    <label for="user">User: </label>
+    <input id="user" type="text" formControlName="user">
+    
+    <label for="password">Password: </label>
+    <input id="password" type="text" formControlName="password">
+
+
+    <div formGroupName="ubicacion">
+      <h2>Ubicacion</h2>
+  
+      <label for="street">Street: </label>
+      <input id="street" type="text" formControlName="street">
+  
+      <label for="city">City: </label>
+      <input id="city" type="text" formControlName="city">
+  
+      <label for="state">State: </label>
+      <input id="state" type="text" formControlName="state">
+  
+      <label for="zip">Zip Code: </label>
+      <input id="zip"type="text" formControlName="zip">
+
+      <label for="country">Country: </label>
+      <input id="country"type="text" formControlName="country">
+    </div>
+  
+    <!-- <div formArrayName="aliases">
+      <h2>Aliases</h2>
+      <button (click)="addAlias()" type="button">+ Add another alias</button>
+  
+      <div *ngFor="let alias of aliases.controls; let i=index">
+         <label for="alias-{{ i }}">Alias:</label>
+        <input id="alias-{{ i }}" type="text" [formControlName]="i">
+      </div>
+    </div>
+   -->
+  
+    <p>Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!usuarioForm.valid">Submit</button>
+  </form>
+  
+  <hr>
+  
+  <p>Form Value: {{ usuarioForm.value | json }}</p>
+  
+  <p>Form Status: {{ usuarioForm.status }}</p>
+  
+  <button (click)="updateProfile()">Update Profile</button>
+  
+  

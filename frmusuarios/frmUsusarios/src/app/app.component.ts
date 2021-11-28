@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+//import { Usuarios } from './usuarios';
+export type EditorType = 'usuario';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frmUsusarios';
+  editor: EditorType = 'usuario';
+
+  get showUsuarioEditor() {
+    return this.editor === 'usuario';
+  }
+
+  toggleEditor(type: EditorType) {
+    this.editor = type;
+  }
 }
