@@ -25,13 +25,15 @@ export class UsuarioEditorComponent  {
     ]) */
   });
 
+  City: any = ['Florida', 'South Dakota', 'Tennessee', 'Michigan', 'California','Texas']
+
 /*   get aliases() {
     return this.usuarioForm.get('aliases') as FormArray;
   }
  */
   constructor(private fb: FormBuilder) { }
 
-  updateProfile() {
+ /*  updateProfile() {
     this.usuarioForm.patchValue({
       firstName: 'Nancy',
       address: {
@@ -39,6 +41,18 @@ export class UsuarioEditorComponent  {
       }
     });
   }
+ */
+ /*  changeCity(e) {
+    console.log(e.value)
+    this.city.setValue(e.target.value, {
+      onlySelf: true
+    })
+  }
+ */
+  // Getter method to access formcontrols
+    get cityName() {
+      return this.usuarioForm.get('cityName');
+    }
 
  /*  addAlias() {
     this.aliases.push(this.fb.control(''));
