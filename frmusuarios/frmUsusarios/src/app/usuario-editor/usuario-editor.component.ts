@@ -19,44 +19,16 @@ export class UsuarioEditorComponent  {
       state: [''],
       zip: [''],
       country:['']
-    })/*,
-     aliases: this.fb.array([
-      this.fb.control('')
-    ]) */
+    })
   });
 
-  City: any = ['Florida', 'South Dakota', 'Tennessee', 'Michigan', 'California','Texas']
-
-/*   get aliases() {
-    return this.usuarioForm.get('aliases') as FormArray;
-  }
- */
+  City: any = ['Miami', 'Indianapolis', 'Monterrey', 'Buenos Aires', 'Los Angeles','Houston']
+  State: any = ['Florida', 'Indiana', 'California', 'Texas', 'Nuevo Leon', 'Capital Federal','Cali']
+  Country: any = ['USA', 'Mexico', 'Colombia', 'Argentina']
+  
   constructor(private fb: FormBuilder) { }
 
- /*  updateProfile() {
-    this.usuarioForm.patchValue({
-      firstName: 'Nancy',
-      address: {
-        street: '123 Drew Street'
-      }
-    });
-  }
- */
- /*  changeCity(e) {
-    console.log(e.value)
-    this.city.setValue(e.target.value, {
-      onlySelf: true
-    })
-  }
- */
-  // Getter method to access formcontrols
-    get cityName() {
-      return this.usuarioForm.get('cityName');
-    }
-
- /*  addAlias() {
-    this.aliases.push(this.fb.control(''));
-  } */
+ 
 
   onSubmit() {
   

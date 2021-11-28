@@ -20,21 +20,34 @@
   
       <!-- <label for="city">City: </label>
       <input id="city" type="text" formControlName="city"> -->
-      <label for="city">City: </label>
+      <label for="city">City : </label>
       <div class="mb-3">
-        <select id="city" class="custom-select" formControlName="city">
-          <option value="">Choose your city</option>
+        <select id="city" class="col-12" formControlName="city">
+          <option value="">Choose your City</option>
           <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
         </select>
       </div> 
-      <label for="state">State: </label>
-      <input id="state" type="text" formControlName="state">
-  
+     <!--  <label for="state">State: </label>
+      <input id="state" type="text" formControlName="state"> -->
+      <label for="state">State : </label>
+      <div class="mb-3">
+        <select id="city" class="col-12" formControlName="state">
+          <option value="">Choose your State</option>
+          <option *ngFor="let state of State" [ngValue]="state">{{state}}</option>
+        </select>
+      </div> 
       <label for="zip">Zip Code: </label>
       <input id="zip"type="text" formControlName="zip">
 
-      <label for="country">Country: </label>
-      <input id="country"type="text" formControlName="country">
+      <!-- <label for="country">Country: </label>
+      <input id="country"type="text" formControlName="country"> -->
+      <label for="country">Country : </label>
+      <div class="mb-3">
+        <select id="country" class="col-12" formControlName="country">
+          <option value="">Choose your Country</option>
+          <option *ngFor="let country of Country" [ngValue]="country">{{country}}</option>
+        </select>
+      </div> 
     </div>
   
     <!-- <div formArrayName="aliases">
